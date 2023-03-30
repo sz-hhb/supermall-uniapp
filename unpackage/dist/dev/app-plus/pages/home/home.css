@@ -114,3 +114,10 @@
 .popular .image[data-v-29e3ef9e] {
   width: 100%;
 }
+.tab-control {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.5);
+}

@@ -57,6 +57,11 @@
 	}
 </script>
 
-<style>
-
+<style lang="scss">
+	.tab-control {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background-color: rgba(255, 255, 255, 0.5);
+	}
 </style>
