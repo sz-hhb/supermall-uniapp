@@ -1,0 +1,1 @@
+"use strict";const o=require("../../common/vendor.js"),e=require("../../common/assets.js"),s={__name:"grid-view-item",props:{goodsInfo:{type:Object,default:()=>{}}},setup:s=>(t,n)=>({a:s.goodsInfo.show.img,b:o.t(s.goodsInfo.title),c:o.t(s.goodsInfo.price),d:e._imports_0,e:o.t(s.goodsInfo.cfav)})};wx.createComponent(s);

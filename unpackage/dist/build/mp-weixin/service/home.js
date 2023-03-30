@@ -1,0 +1,1 @@
+"use strict";const t=require("./index.js");exports.getHomeData=function(e,u){return t.HyQuest.get("/home/data",{type:e,page:u})},exports.getHomeMultiData=function(){return t.HyQuest.get("/home/multidata")};

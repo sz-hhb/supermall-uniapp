@@ -1,0 +1,19 @@
+.recommend-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+.recommend-wrapper .recommend-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 28rpx;
+}
+.recommend-wrapper .recommend-item .image {
+  width: 150rpx;
+  height: 150rpx;
+}
+.recommend-wrapper .recommend-item .title {
+  margin-top: 10rpx;
+}

@@ -1,0 +1,1 @@
+<view class="goods-item"><image class="image" lazy-load="{{true}}" src="{{a}}" mode="widthFix"></image><view class="desc-info"><view class="title">{{b}}</view><view class="info"><text class="price">￥{{c}}</text><image class="cfav-img" src="{{d}}" mode="widthFix"></image><text class="cfav">{{e}}</text></view></view></view>
