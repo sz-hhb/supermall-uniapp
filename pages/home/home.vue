@@ -7,7 +7,7 @@
 		<uni-grid :column="2" :square="false" :show-border="false" :highlight="false">
 			<template v-for="(item, index) in goodsList[types[currentType]].list" :key="item.iid">
 				<uni-grid-item>
-					<grid-view-item :goods-info="item"></grid-view-item>
+					<grid-view-item :goods-info="item" @click="goodItemClick(item.iid)"></grid-view-item>
 				</uni-grid-item>
 			</template>
 		</uni-grid>
@@ -53,7 +53,13 @@
 	}
 
 	const tabItemClick = (index) => {
-		currentType.value = index;
+		currentType.value = index
+	}
+
+	const goodItemClick = (iid) => {
+		uni.navigateTo({
+			url: "/pages/detail/detail?id=" + iid
+		})
 	}
 </script>
 
