@@ -32,6 +32,7 @@
 	.tab-control {
 		display: flex;
 		align-items: center;
+		width: 100%;
 		padding: 20rpx;
 
 		.tab-item {

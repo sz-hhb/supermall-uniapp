@@ -32,7 +32,8 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 10rpx;
-		padding: 10rpx;
+		width: 48%;
+		padding-bottom: 10rpx;
 
 		.image {
 			width: 100%;

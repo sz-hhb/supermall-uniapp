@@ -6,16 +6,12 @@ require("../../service/index.js");
 if (!Array) {
   const _easycom_tab_control2 = common_vendor.resolveComponent("tab-control");
   const _easycom_grid_view_item2 = common_vendor.resolveComponent("grid-view-item");
-  const _easycom_uni_grid_item2 = common_vendor.resolveComponent("uni-grid-item");
-  const _easycom_uni_grid2 = common_vendor.resolveComponent("uni-grid");
-  (_easycom_tab_control2 + _easycom_grid_view_item2 + _easycom_uni_grid_item2 + _easycom_uni_grid2)();
+  (_easycom_tab_control2 + _easycom_grid_view_item2)();
 }
 const _easycom_tab_control = () => "../../components/tab-control/tab-control.js";
 const _easycom_grid_view_item = () => "../../components/grid-view-item/grid-view-item.js";
-const _easycom_uni_grid_item = () => "../../uni_modules/uni-grid/components/uni-grid-item/uni-grid-item.js";
-const _easycom_uni_grid = () => "../../uni_modules/uni-grid/components/uni-grid/uni-grid.js";
 if (!Math) {
-  (HomeBanner + HomeRecommend + HomePopular + _easycom_tab_control + _easycom_grid_view_item + _easycom_uni_grid_item + _easycom_uni_grid)();
+  (HomeBanner + HomeRecommend + HomePopular + _easycom_tab_control + _easycom_grid_view_item)();
 }
 const HomeBanner = () => "./cpns/home-banner.js";
 const HomeRecommend = () => "./cpns/home-recommend.js";
@@ -38,6 +34,14 @@ const _sfc_main = {
         goodsList.value[[store_home.types[currentType.value]]].page + 1
       );
     });
+    const isActive = common_vendor.ref(false);
+    common_vendor.onPageScroll((e) => {
+      if (e.scrollTop >= 550) {
+        isActive.value = true;
+      } else {
+        isActive.value = false;
+      }
+    });
     const bannerClick = (link) => {
       common_vendor.index.navigateTo({
         url: "/pages/webview/webview?link=" + link
@@ -50,6 +54,15 @@ const _sfc_main = {
     };
     const tabItemClick = (index) => {
       currentType.value = index;
+      window.scrollTo({
+        left: 0,
+        top: 540
+      });
+    };
+    const goodItemClick = (iid) => {
+      common_vendor.index.navigateTo({
+        url: "/pages/detail/detail?id=" + iid
+      });
     };
     return (_ctx, _cache) => {
       return {
@@ -61,29 +74,25 @@ const _sfc_main = {
         d: common_vendor.p({
           recommends: common_vendor.unref(recommends)
         }),
-        e: common_vendor.o(tabItemClick),
-        f: common_vendor.p({
+        e: isActive.value ? 1 : "",
+        f: common_vendor.o(tabItemClick),
+        g: common_vendor.p({
           titles: ["流行", "新款", "精选"]
         }),
-        g: common_vendor.f(common_vendor.unref(goodsList)[common_vendor.unref(store_home.types)[currentType.value]].list, (item, index, i0) => {
+        h: common_vendor.f(common_vendor.unref(goodsList)[common_vendor.unref(store_home.types)[currentType.value]].list, (item, index, i0) => {
           return {
-            a: "c48adcd8-6-" + i0 + "," + ("c48adcd8-5-" + i0),
-            b: common_vendor.p({
+            a: common_vendor.o(($event) => goodItemClick(item.iid), item.iid),
+            b: "c48adcd8-4-" + i0,
+            c: common_vendor.p({
               ["goods-info"]: item
             }),
-            c: "c48adcd8-5-" + i0 + ",c48adcd8-4",
             d: item.iid
           };
-        }),
-        h: common_vendor.p({
-          column: 2,
-          square: false,
-          ["show-border"]: false,
-          highlight: false
         })
       };
     };
   }
 };
 const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "E:/study/uniapp+taro/HYMallApp/pages/home/home.vue"]]);
+_sfc_main.__runtimeHooks = 1;
 wx.createPage(MiniProgramPage);

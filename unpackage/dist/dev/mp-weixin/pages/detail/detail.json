@@ -1,4 +1,9 @@
 {
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "detail-tab-bar": "./cpns/detail-tab-bar",
+    "detail-swiper": "./cpns/detail-swiper",
+    "detail-base-info": "./cpns/detail-base-info",
+    "detail-shop-info": "./cpns/detail-shop-info"
+  }
 }

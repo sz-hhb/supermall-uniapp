@@ -3,14 +3,19 @@
 		<home-banner :banners="banners" @banner-click="bannerClick"></home-banner>
 		<home-recommend :recommends="recommends" @recommend-item-click="recommendItemClick"></home-recommend>
 		<home-popular></home-popular>
-		<tab-control :titles="['流行', '新款', '精选']" @tab-item-click="tabItemClick"></tab-control>
-		<uni-grid :column="2" :square="false" :show-border="false" :highlight="false">
+		<tab-control :class="{fixed: isActive}" :titles="['流行', '新款', '精选']" @tab-item-click="tabItemClick"></tab-control>
+		<!-- <uni-grid :column="2" :square="false" :show-border="false" :highlight="false">
 			<template v-for="(item, index) in goodsList[types[currentType]].list" :key="item.iid">
 				<uni-grid-item>
 					<grid-view-item :goods-info="item" @click="goodItemClick(item.iid)"></grid-view-item>
 				</uni-grid-item>
 			</template>
-		</uni-grid>
+		</uni-grid> -->
+		<view class="goods-list">
+			<template v-for="(item, index) in goodsList[types[currentType]].list" :key="item.iid">
+				<grid-view-item :goods-info="item" @click="goodItemClick(item.iid)"></grid-view-item>
+			</template>
+		</view>
 	</view>
 </template>
 
@@ -19,7 +24,7 @@
 	import HomeRecommend from "./cpns/home-recommend.vue"
 	import HomePopular from "./cpns/home-popular.vue"
 	import { ref, computed } from "vue"
-	import { onLoad, onReachBottom } from "@dcloudio/uni-app"
+	import { onLoad, onReachBottom, onPageScroll } from "@dcloudio/uni-app"
 	import { storeToRefs } from "pinia"
 	import { useHomeStore, types } from "@/store/home.js"
 
@@ -40,6 +45,16 @@
 			goodsList.value[[types[currentType.value]]].page + 1)
 	})
 
+	const isActive = ref(false)
+
+	onPageScroll((e) => {
+		if (e.scrollTop >= 550) {
+			isActive.value = true;
+		} else {
+			isActive.value = false;
+		}
+	})
+
 	const bannerClick = (link) => {
 		uni.navigateTo({
 			url: "/pages/webview/webview?link=" + link
@@ -54,6 +69,11 @@
 
 	const tabItemClick = (index) => {
 		currentType.value = index
+
+		window.scrollTo({
+			left: 0,
+			top: 540
+		})
 	}
 
 	const goodItemClick = (iid) => {
@@ -64,10 +84,21 @@
 </script>
 
 <style lang="scss">
-	.tab-control {
-		position: sticky;
-		top: 0;
+	.home {
+		position: relative;
+	}
+
+	.fixed {
+		position: fixed;
+		top: 44px;
 		z-index: 100;
 		background-color: rgba(255, 255, 255, 0.5);
+	}
+
+	.goods-list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		padding: 16rpx;
 	}
 </style>

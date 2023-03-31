@@ -1,0 +1,94 @@
+.detail-tab-bar[data-v-5ad99fb8] {
+  display: flex;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  height: 2.5rem;
+}
+.detail-tab-bar .tab-bar-item[data-v-5ad99fb8] {
+  flex: 1;
+  text-align: center;
+}
+.detail-tab-bar .tab-bar-item .title[data-v-5ad99fb8] {
+  font-size: 0.9375rem;
+}
+.detail-tab-bar .tab-bar-item .title.active[data-v-5ad99fb8] {
+  font-weight: 700;
+  color: #ff8198;
+}
+.swiper[data-v-a7379e38] {
+  height: 20rem;
+}
+.swiper .image[data-v-a7379e38] {
+  width: 100%;
+}
+.base-info[data-v-dd14a04a] {
+  display: flex;
+  flex-direction: column;
+}
+.base-info .good-desc[data-v-dd14a04a] {
+  padding: 0.3125rem;
+}
+.base-info .good-price[data-v-dd14a04a] {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.3125rem;
+  padding: 0.625rem 0;
+}
+.base-info .good-price .now-price[data-v-dd14a04a] {
+  font-size: 1.40625rem;
+  color: #ff8198;
+}
+.base-info .good-price .old-price[data-v-dd14a04a] {
+  display: flex;
+  position: relative;
+  margin-bottom: 0.125rem;
+}
+.base-info .good-price .old-price .desc[data-v-dd14a04a] {
+  color: #9d9d9d;
+  text-decoration: line-through;
+}
+.base-info .good-price .old-price .discount[data-v-dd14a04a] {
+  position: absolute;
+  right: -2rem;
+  top: -0.5625rem;
+  padding: 0.1875rem 0.3125rem;
+  border-radius: 0.46875rem;
+  font-size: 0.75rem;
+  color: #ffffff;
+  background-color: #ff8198;
+}
+.base-info .good-columns[data-v-dd14a04a] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.3125rem;
+  border-bottom: 0.0625rem solid #efefef;
+}
+.base-info .good-columns .column-item[data-v-dd14a04a] {
+  color: #a9a9a9;
+  font-size: 0.875rem;
+  padding-bottom: 0.625rem;
+}
+.base-info .promise-colums[data-v-dd14a04a] {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.25rem 0.3125rem;
+  font-size: 0.875rem;
+}
+.base-info .promise-colums .right-select[data-v-dd14a04a] {
+  width: 0.625rem;
+  height: 0.625rem;
+  border-left: 0.0625rem solid #6b6b6b;
+  border-right: 0.0625rem solid #6b6b6b;
+  border-top: 0.0625rem solid #6b6b6b;
+  border-bottom: 0.0625rem solid #6b6b6b;
+}
+.detail-wrapper {
+  height: 100%;
+  overflow: auto;
+}
+.detail-wrapper .detail-scroll {
+  height: calc(100% - 3.125rem);
+}

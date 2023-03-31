@@ -38,7 +38,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$d = {
+  const _sfc_main$g = {
     __name: "tab-control",
     props: {
       titles: {
@@ -82,7 +82,7 @@ if (uni.restoreGlobal) {
       };
     }
   };
-  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-86d07902"], ["__file", "E:/study/uniapp+taro/HYMallApp/components/tab-control/tab-control.vue"]]);
+  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["__scopeId", "data-v-86d07902"], ["__file", "E:/study/uniapp+taro/HYMallApp/components/tab-control/tab-control.vue"]]);
   const ON_LOAD = "onLoad";
   const ON_REACH_BOTTOM = "onReachBottom";
   function formatAppLog(type, filename, ...args) {
@@ -101,7 +101,7 @@ if (uni.restoreGlobal) {
   const onLoad = /* @__PURE__ */ createHook(ON_LOAD);
   const onReachBottom = /* @__PURE__ */ createHook(ON_REACH_BOTTOM);
   const _imports_0$1 = "/static/images/common/favor.png";
-  const _sfc_main$c = {
+  const _sfc_main$f = {
     __name: "grid-view-item",
     props: {
       goodsInfo: {
@@ -153,8 +153,8 @@ if (uni.restoreGlobal) {
       };
     }
   };
-  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["__scopeId", "data-v-8ed22fda"], ["__file", "E:/study/uniapp+taro/HYMallApp/components/grid-view-item/grid-view-item.vue"]]);
-  const _sfc_main$b = {
+  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["__scopeId", "data-v-8ed22fda"], ["__file", "E:/study/uniapp+taro/HYMallApp/components/grid-view-item/grid-view-item.vue"]]);
+  const _sfc_main$e = {
     name: "UniGridItem",
     inject: ["grid"],
     props: {
@@ -204,7 +204,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     return $data.width ? (vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -231,8 +231,8 @@ if (uni.restoreGlobal) {
       /* STYLE */
     )) : vue.createCommentVNode("v-if", true);
   }
-  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$6], ["__scopeId", "data-v-7a807eb7"], ["__file", "E:/study/uniapp+taro/HYMallApp/uni_modules/uni-grid/components/uni-grid-item/uni-grid-item.vue"]]);
-  const _sfc_main$a = {
+  const __easycom_2 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$5], ["__scopeId", "data-v-7a807eb7"], ["__file", "E:/study/uniapp+taro/HYMallApp/uni_modules/uni-grid/components/uni-grid-item/uni-grid-item.vue"]]);
+  const _sfc_main$d = {
     name: "UniGrid",
     emits: ["change"],
     props: {
@@ -302,7 +302,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-grid-wrap" }, [
       vue.createElementVNode("view", {
         id: $data.elId,
@@ -314,8 +314,8 @@ if (uni.restoreGlobal) {
       ], 14, ["id"])
     ]);
   }
-  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$5], ["__scopeId", "data-v-07acefee"], ["__file", "E:/study/uniapp+taro/HYMallApp/uni_modules/uni-grid/components/uni-grid/uni-grid.vue"]]);
-  const _sfc_main$9 = {
+  const __easycom_3 = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$4], ["__scopeId", "data-v-07acefee"], ["__file", "E:/study/uniapp+taro/HYMallApp/uni_modules/uni-grid/components/uni-grid/uni-grid.vue"]]);
+  const _sfc_main$c = {
     __name: "home-banner",
     props: {
       banners: {
@@ -359,8 +359,8 @@ if (uni.restoreGlobal) {
       };
     }
   };
-  const HomeBanner = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["__scopeId", "data-v-945d8e98"], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/home/cpns/home-banner.vue"]]);
-  const _sfc_main$8 = {
+  const HomeBanner = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["__scopeId", "data-v-945d8e98"], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/home/cpns/home-banner.vue"]]);
+  const _sfc_main$b = {
     __name: "home-recommend",
     props: {
       recommends: {
@@ -405,10 +405,10 @@ if (uni.restoreGlobal) {
       };
     }
   };
-  const HomeRecommend = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-637e2969"], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/home/cpns/home-recommend.vue"]]);
+  const HomeRecommend = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["__scopeId", "data-v-637e2969"], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/home/cpns/home-recommend.vue"]]);
   const _imports_0 = "/static/recommend_bg.jpg";
-  const _sfc_main$7 = {};
-  function _sfc_render$4(_ctx, _cache) {
+  const _sfc_main$a = {};
+  function _sfc_render$3(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "popular" }, [
       vue.createElementVNode("image", {
         class: "image",
@@ -417,7 +417,7 @@ if (uni.restoreGlobal) {
       })
     ]);
   }
-  const HomePopular = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$4], ["__scopeId", "data-v-29e3ef9e"], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/home/cpns/home-popular.vue"]]);
+  const HomePopular = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$3], ["__scopeId", "data-v-29e3ef9e"], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/home/cpns/home-popular.vue"]]);
   var isVue2 = false;
   function set(target, key, val) {
     if (Array.isArray(target)) {
@@ -2085,7 +2085,7 @@ This will fail in production if not fixed.`);
       }
     }
   });
-  const _sfc_main$6 = {
+  const _sfc_main$9 = {
     __name: "home",
     setup(__props) {
       const homeStore = useHomeStore();
@@ -2115,6 +2115,11 @@ This will fail in production if not fixed.`);
       };
       const tabItemClick = (index) => {
         currentType.value = index;
+      };
+      const goodItemClick = (iid) => {
+        uni.navigateTo({
+          url: "/pages/detail/detail?id=" + iid
+        });
       };
       return (_ctx, _cache) => {
         const _component_tab_control = resolveEasycom(vue.resolveDynamicComponent("tab-control"), __easycom_0);
@@ -2153,7 +2158,10 @@ This will fail in production if not fixed.`);
                     },
                     {
                       default: vue.withCtx(() => [
-                        vue.createVNode(_component_grid_view_item, { "goods-info": item }, null, 8, ["goods-info"])
+                        vue.createVNode(_component_grid_view_item, {
+                          "goods-info": item,
+                          onClick: ($event) => goodItemClick(item.iid)
+                        }, null, 8, ["goods-info", "onClick"])
                       ]),
                       _: 2
                       /* DYNAMIC */
@@ -2173,17 +2181,8 @@ This will fail in production if not fixed.`);
       };
     }
   };
-  const PagesHomeHome = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__file", "E:/study/uniapp+taro/HYMallApp/pages/home/home.vue"]]);
-  const _sfc_main$5 = {
-    data() {
-      return {};
-    }
-  };
-  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("view");
-  }
-  const PagesCategoryCategory = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$3], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/category/category.vue"]]);
-  const _sfc_main$4 = {
+  const PagesHomeHome = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["__file", "E:/study/uniapp+taro/HYMallApp/pages/home/home.vue"]]);
+  const _sfc_main$8 = {
     data() {
       return {};
     }
@@ -2191,22 +2190,252 @@ This will fail in production if not fixed.`);
   function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view");
   }
-  const PagesCartCart = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$2], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/cart/cart.vue"]]);
-  const _sfc_main$3 = {
+  const PagesCategoryCategory = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$2], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/category/category.vue"]]);
+  const _sfc_main$7 = {
+    data() {
+      return {};
+    }
+  };
+  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view");
+  }
+  const PagesCartCart = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$1], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/cart/cart.vue"]]);
+  const _sfc_main$6 = {
     data() {
       return {};
     },
     methods: {}
   };
-  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view");
   }
-  const PagesProfileProfile = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$1], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/profile/profile.vue"]]);
-  const _sfc_main$2 = {};
-  function _sfc_render(_ctx, _cache) {
-    return vue.openBlock(), vue.createElementBlock("view");
+  const PagesProfileProfile = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/profile/profile.vue"]]);
+  const _sfc_main$5 = {
+    __name: "detail-tab-bar",
+    emits: ["detail-tab-bar-click"],
+    setup(__props, { emit: emits }) {
+      const tabBarList = vue.reactive([
+        { id: 0, title: "商品" },
+        { id: 1, title: "参数" },
+        { id: 2, title: "评论" },
+        { id: 3, title: "推荐" }
+      ]);
+      const currentIndex = vue.ref(0);
+      const tabBarClick = (index) => {
+        currentIndex.value = index;
+        emits("detail-tab-bar-click", index);
+      };
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createElementBlock("view", { class: "detail-tab-bar" }, [
+          (vue.openBlock(true), vue.createElementBlock(
+            vue.Fragment,
+            null,
+            vue.renderList(tabBarList, (item, index) => {
+              return vue.openBlock(), vue.createElementBlock("view", {
+                key: item.id,
+                class: "tab-bar-item",
+                onClick: ($event) => tabBarClick(index)
+              }, [
+                vue.createElementVNode(
+                  "text",
+                  {
+                    class: vue.normalizeClass(["title", { active: index === currentIndex.value }])
+                  },
+                  vue.toDisplayString(item.title),
+                  3
+                  /* TEXT, CLASS */
+                )
+              ], 8, ["onClick"]);
+            }),
+            128
+            /* KEYED_FRAGMENT */
+          ))
+        ]);
+      };
+    }
+  };
+  const DetailTabBar = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-5ad99fb8"], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/detail/cpns/detail-tab-bar.vue"]]);
+  const _sfc_main$4 = {
+    __name: "detail-swiper",
+    props: {
+      bannerList: {
+        type: Array,
+        default: () => []
+      }
+    },
+    setup(__props) {
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createElementBlock("swiper", {
+          class: "swiper",
+          "indicator-dots": true,
+          "indicator-color": "#ff7555",
+          autoplay: true,
+          interval: 3e3,
+          duration: 1e3
+        }, [
+          (vue.openBlock(true), vue.createElementBlock(
+            vue.Fragment,
+            null,
+            vue.renderList(__props.bannerList, (item, index) => {
+              return vue.openBlock(), vue.createElementBlock("swiper-item", { key: index }, [
+                vue.createElementVNode("image", {
+                  class: "image",
+                  src: item,
+                  mode: "widthFix"
+                }, null, 8, ["src"])
+              ]);
+            }),
+            128
+            /* KEYED_FRAGMENT */
+          ))
+        ]);
+      };
+    }
+  };
+  const DetailSwiper = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-a7379e38"], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/detail/cpns/detail-swiper.vue"]]);
+  const _sfc_main$3 = {
+    __name: "detail-base-info",
+    props: {
+      baseInfo: {
+        type: Object,
+        default: () => {
+        }
+      }
+    },
+    setup(__props) {
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createElementBlock("view", { class: "base-info" }, [
+          vue.createElementVNode(
+            "view",
+            { class: "good-desc" },
+            vue.toDisplayString(__props.baseInfo.goodInfo.desc),
+            1
+            /* TEXT */
+          ),
+          vue.createElementVNode("view", { class: "good-price" }, [
+            vue.createElementVNode("view", { class: "now-price" }, [
+              vue.createElementVNode(
+                "text",
+                null,
+                vue.toDisplayString(__props.baseInfo.goodInfo.price),
+                1
+                /* TEXT */
+              )
+            ]),
+            vue.createElementVNode("view", { class: "old-price" }, [
+              vue.createElementVNode(
+                "text",
+                { class: "desc" },
+                vue.toDisplayString(__props.baseInfo.goodInfo.oldPrice),
+                1
+                /* TEXT */
+              ),
+              vue.createElementVNode(
+                "text",
+                { class: "discount" },
+                vue.toDisplayString(__props.baseInfo.goodInfo.discountDesc),
+                1
+                /* TEXT */
+              )
+            ])
+          ]),
+          vue.createElementVNode("view", { class: "good-columns" }, [
+            (vue.openBlock(true), vue.createElementBlock(
+              vue.Fragment,
+              null,
+              vue.renderList(__props.baseInfo.columnsList, (item, index) => {
+                return vue.openBlock(), vue.createElementBlock(
+                  "view",
+                  {
+                    key: index,
+                    class: "column-item"
+                  },
+                  vue.toDisplayString(item),
+                  1
+                  /* TEXT */
+                );
+              }),
+              128
+              /* KEYED_FRAGMENT */
+            ))
+          ]),
+          vue.createElementVNode("view", { class: "promise-colums" }, [
+            vue.createElementVNode("text", null, "延误必赔"),
+            vue.createElementVNode("text", null, [
+              vue.createElementVNode("i", { class: "right-select" }),
+              vue.createTextVNode("退货补运费")
+            ]),
+            vue.createElementVNode("text", null, [
+              vue.createElementVNode("i", { class: "right-select" }),
+              vue.createTextVNode("全国包邮")
+            ]),
+            vue.createElementVNode("text", null, [
+              vue.createElementVNode("i", { class: "right-select" }),
+              vue.createTextVNode("7天无理由退货")
+            ])
+          ])
+        ]);
+      };
+    }
+  };
+  const DetailBaseInfo = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-dd14a04a"], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/detail/cpns/detail-base-info.vue"]]);
+  function getDetailPageData(iid) {
+    return HyQuest.get("/detail", { iid });
   }
-  const PagesDetailDetail = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render], ["__file", "E:/study/uniapp+taro/HYMallApp/pages/detail/detail.vue"]]);
+  const useDetailStore = defineStore("detail", {
+    state: () => {
+      return {
+        detailPageData: {},
+        topImages: [],
+        goodInfo: {},
+        columnsList: []
+      };
+    },
+    actions: {
+      async fetchDetailPageData(iid) {
+        const res = await getDetailPageData(iid);
+        this.detailPageData = res.result;
+        this.topImages = res.result.itemInfo.topImages;
+        this.goodInfo = res.result.itemInfo;
+        this.columnsList = res.result.columns;
+      }
+    }
+  });
+  const _sfc_main$2 = {
+    __name: "detail",
+    props: {
+      id: {
+        type: String,
+        default: ""
+      }
+    },
+    setup(__props) {
+      const props = __props;
+      const detailStore = useDetailStore();
+      const { topImages, goodInfo, columnsList } = storeToRefs(detailStore);
+      onLoad(() => {
+        detailStore.fetchDetailPageData(props.id);
+      });
+      const detailTabBarClick = (index) => {
+      };
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createElementBlock("view", { class: "detail-wrapper" }, [
+          vue.createVNode(DetailTabBar, { onDetailTabBarClick: detailTabBarClick }),
+          vue.createElementVNode("scroll-view", {
+            class: "detail-scroll",
+            "scroll-y": "true",
+            "scroll-top": 0
+          }, [
+            vue.createVNode(DetailSwiper, { "banner-list": vue.unref(topImages) }, null, 8, ["banner-list"]),
+            vue.createVNode(DetailBaseInfo, {
+              "base-info": { goodInfo: vue.unref(goodInfo), columnsList: vue.unref(columnsList) }
+            }, null, 8, ["base-info"])
+          ])
+        ]);
+      };
+    }
+  };
+  const PagesDetailDetail = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__file", "E:/study/uniapp+taro/HYMallApp/pages/detail/detail.vue"]]);
   const _sfc_main$1 = {
     __name: "webview",
     props: {
