@@ -3,7 +3,8 @@
 		<home-banner :banners="banners" @banner-click="bannerClick"></home-banner>
 		<home-recommend :recommends="recommends" @recommend-item-click="recommendItemClick"></home-recommend>
 		<home-popular></home-popular>
-		<tab-control :class="{fixed: isActive}" :titles="['流行', '新款', '精选']" @tab-item-click="tabItemClick"></tab-control>
+		<tab-control ref="tabControlRef" :class="{fixed: isActive}" :titles="['流行', '新款', '精选']"
+			@tab-item-click="tabItemClick"></tab-control>
 		<!-- <uni-grid :column="2" :square="false" :show-border="false" :highlight="false">
 			<template v-for="(item, index) in goodsList[types[currentType]].list" :key="item.iid">
 				<uni-grid-item>
@@ -13,7 +14,9 @@
 		</uni-grid> -->
 		<view class="goods-list">
 			<template v-for="(item, index) in goodsList[types[currentType]].list" :key="item.iid">
-				<grid-view-item :goods-info="item" @click="goodItemClick(item.iid)"></grid-view-item>
+				<view class="item">
+					<grid-view-item :goods-info="item" @goods-item-click="goodItemClick"></grid-view-item>
+				</view>
 			</template>
 		</view>
 	</view>
@@ -45,15 +48,16 @@
 			goodsList.value[[types[currentType.value]]].page + 1)
 	})
 
+	const tabControlRef = ref(null)
 	const isActive = ref(false)
 
-	onPageScroll((e) => {
-		if (e.scrollTop >= 550) {
-			isActive.value = true;
-		} else {
-			isActive.value = false;
-		}
-	})
+	// onPageScroll((e) => {
+	// 	if (e.scrollTop >= 550) {
+	// 		isActive.value = true;
+	// 	} else {
+	// 		isActive.value = false;
+	// 	}
+	// })
 
 	const bannerClick = (link) => {
 		uni.navigateTo({
@@ -69,11 +73,6 @@
 
 	const tabItemClick = (index) => {
 		currentType.value = index
-
-		window.scrollTo({
-			left: 0,
-			top: 540
-		})
 	}
 
 	const goodItemClick = (iid) => {
@@ -89,6 +88,7 @@
 	}
 
 	.fixed {
+		width: 100%;
 		position: fixed;
 		top: 44px;
 		z-index: 100;
@@ -100,5 +100,9 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		padding: 16rpx;
+
+		.item {
+			width: 48%;
+		}
 	}
 </style>

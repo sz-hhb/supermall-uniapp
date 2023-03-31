@@ -1,5 +1,5 @@
 <template>
-	<view class="goods-item">
+	<view class="goods-item" @click="goodsItemClick(goodsInfo.iid)">
 		<!-- #ifndef H5 -->
 		<image class="image" :lazy-load="true" :src="goodsInfo.show.img" mode="widthFix"></image>
 		<!-- #endif -->
@@ -24,6 +24,12 @@
 			default: () => {}
 		}
 	})
+
+	const emits = defineEmits(["goods-item-click"])
+
+	const goodsItemClick = (id) => {
+		emits("goods-item-click", id)
+	}
 </script>
 
 <style lang="scss">
@@ -32,7 +38,6 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 10rpx;
-		width: 48%;
 		padding-bottom: 10rpx;
 
 		.image {

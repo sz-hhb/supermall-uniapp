@@ -2,6 +2,7 @@
   position: relative;
 }
 .fixed {
+  width: 100%;
   position: fixed;
   top: 44px;
   z-index: 100;
@@ -12,4 +13,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 16rpx;
+}
+.goods-list .item {
+  width: 48%;
 }

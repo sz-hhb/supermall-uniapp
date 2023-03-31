@@ -34,14 +34,8 @@ const _sfc_main = {
         goodsList.value[[store_home.types[currentType.value]]].page + 1
       );
     });
+    const tabControlRef = common_vendor.ref(null);
     const isActive = common_vendor.ref(false);
-    common_vendor.onPageScroll((e) => {
-      if (e.scrollTop >= 550) {
-        isActive.value = true;
-      } else {
-        isActive.value = false;
-      }
-    });
     const bannerClick = (link) => {
       common_vendor.index.navigateTo({
         url: "/pages/webview/webview?link=" + link
@@ -54,10 +48,6 @@ const _sfc_main = {
     };
     const tabItemClick = (index) => {
       currentType.value = index;
-      window.scrollTo({
-        left: 0,
-        top: 540
-      });
     };
     const goodItemClick = (iid) => {
       common_vendor.index.navigateTo({
@@ -74,14 +64,17 @@ const _sfc_main = {
         d: common_vendor.p({
           recommends: common_vendor.unref(recommends)
         }),
-        e: isActive.value ? 1 : "",
-        f: common_vendor.o(tabItemClick),
-        g: common_vendor.p({
+        e: common_vendor.sr(tabControlRef, "c48adcd8-3", {
+          "k": "tabControlRef"
+        }),
+        f: isActive.value ? 1 : "",
+        g: common_vendor.o(tabItemClick),
+        h: common_vendor.p({
           titles: ["流行", "新款", "精选"]
         }),
-        h: common_vendor.f(common_vendor.unref(goodsList)[common_vendor.unref(store_home.types)[currentType.value]].list, (item, index, i0) => {
+        i: common_vendor.f(common_vendor.unref(goodsList)[common_vendor.unref(store_home.types)[currentType.value]].list, (item, index, i0) => {
           return {
-            a: common_vendor.o(($event) => goodItemClick(item.iid), item.iid),
+            a: common_vendor.o(goodItemClick, item.iid),
             b: "c48adcd8-4-" + i0,
             c: common_vendor.p({
               ["goods-info"]: item

@@ -10,14 +10,19 @@ const _sfc_main = {
       }
     }
   },
-  setup(__props) {
+  emits: ["goods-item-click"],
+  setup(__props, { emit: emits }) {
+    const goodsItemClick = (id) => {
+      emits("goods-item-click", id);
+    };
     return (_ctx, _cache) => {
       return {
         a: __props.goodsInfo.show.img,
         b: common_vendor.t(__props.goodsInfo.title),
         c: common_vendor.t(__props.goodsInfo.price),
         d: common_assets._imports_0,
-        e: common_vendor.t(__props.goodsInfo.cfav)
+        e: common_vendor.t(__props.goodsInfo.cfav),
+        f: common_vendor.o(($event) => goodsItemClick(__props.goodsInfo.iid))
       };
     };
   }

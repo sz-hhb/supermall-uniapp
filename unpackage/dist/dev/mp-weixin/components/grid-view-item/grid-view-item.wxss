@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: center;
   gap: 10rpx;
-  width: 48%;
   padding-bottom: 10rpx;
 }
 .goods-item .image {

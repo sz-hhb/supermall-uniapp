@@ -33,7 +33,7 @@
 		display: flex;
 		align-items: center;
 		width: 100%;
-		padding: 20rpx;
+		padding: 20rpx 0;
 
 		.tab-item {
 			flex: 1;
