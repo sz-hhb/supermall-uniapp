@@ -1,0 +1,6 @@
+.good-param-wrapper {
+  padding-bottom: 30rpx;
+}
+.good-param-wrapper .set-value {
+  color: #f17f76;
+}

@@ -8,7 +8,9 @@ const useDetailStore = common_vendor.defineStore("detail", {
       goodInfo: {},
       columnsList: [],
       shopInfo: {},
-      goodDetailInfo: {}
+      goodDetailInfo: {},
+      goodParamInfo: [],
+      goodParamRule: []
     };
   },
   actions: {
@@ -19,6 +21,8 @@ const useDetailStore = common_vendor.defineStore("detail", {
       this.columnsList = res.result.columns;
       this.shopInfo = res.result.shopInfo;
       this.goodDetailInfo = res.result.detailInfo;
+      this.goodParamInfo = res.result.itemParams.info.set;
+      this.goodParamRule = res.result.itemParams.rule.tables[0];
     }
   }
 });

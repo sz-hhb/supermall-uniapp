@@ -2,11 +2,19 @@
 	<view class="detail-wrapper">
 		<detail-tab-bar @detail-tab-bar-click="detailTabBarClick"></detail-tab-bar>
 
+
 		<scroll-view class="detail-scroll" scroll-y="true" :scroll-top="0">
-			<detail-swiper :banner-list="topImages"></detail-swiper>
-			<detail-base-info :base-info="{goodInfo,columnsList}"></detail-base-info>
-			<detail-shop-info :shop-info="shopInfo"></detail-shop-info>
-			<detail-good-info :good-detail-info="goodDetailInfo"></detail-good-info>
+			<template v-if="currentDetailPageIndex === 0">
+				<detail-swiper :banner-list="topImages"></detail-swiper>
+				<detail-base-info :base-info="{goodInfo,columnsList}"></detail-base-info>
+				<detail-shop-info :shop-info="shopInfo"></detail-shop-info>
+				<detail-good-info :good-detail-info="goodDetailInfo"></detail-good-info>
+			</template>
+
+			<template v-if="currentDetailPageIndex === 1">
+				<detail-good-param :good-params="{goodParamRule,goodParamInfo}"></detail-good-param>
+			</template>
+
 		</scroll-view>
 	</view>
 </template>
@@ -17,14 +25,16 @@
 	import DetailBaseInfo from "./cpns/detail-base-info.vue"
 	import DetailShopInfo from "./cpns/detail-shop-info.vue"
 	import DetailGoodInfo from "./cpns/detail-good-info.vue"
+	import DetailGoodParam from "./cpns/detail-good-param.vue"
 	import { onLoad } from "@dcloudio/uni-app"
 	import { useDetailStore } from "@/store/detail.js"
 	import { storeToRefs } from "pinia"
-	import { computed } from "vue"
+	import { ref } from "vue"
 
 	const detailStore = useDetailStore()
 
-	const { topImages, goodInfo, columnsList, shopInfo, goodDetailInfo } = storeToRefs(detailStore)
+	const { topImages, goodInfo, columnsList, shopInfo, goodDetailInfo, goodParamInfo, goodParamRule } = storeToRefs(
+		detailStore)
 
 	const props = defineProps({
 		id: {
@@ -34,11 +44,14 @@
 	})
 
 	onLoad(() => {
-		detailStore.fetchDetailPageData(props.id);
+		detailStore.fetchDetailPageData(props.id)
 	})
 
+	const currentDetailPageIndex = ref(0)
 
-	const detailTabBarClick = (index) => {}
+	const detailTabBarClick = (index) => {
+		currentDetailPageIndex.value = index
+	}
 </script>
 
 <style lang="scss">
