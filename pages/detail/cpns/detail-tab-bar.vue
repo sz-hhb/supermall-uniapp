@@ -33,7 +33,10 @@
 		display: flex;
 		align-items: center;
 		position: sticky;
+		top: 88rpx;
+		z-index: 999;
 		height: 80rpx;
+		background-color: rgba(255, 255, 255, 0.8);
 
 		.tab-bar-item {
 			flex: 1;

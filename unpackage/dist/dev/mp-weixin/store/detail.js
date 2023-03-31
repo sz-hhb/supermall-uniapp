@@ -11,7 +11,8 @@ const useDetailStore = common_vendor.defineStore("detail", {
       goodDetailInfo: {},
       goodParamInfo: [],
       goodParamRule: [],
-      goodRateList: []
+      goodRateList: [],
+      goodRecommendList: []
     };
   },
   actions: {
@@ -25,6 +26,10 @@ const useDetailStore = common_vendor.defineStore("detail", {
       this.goodParamInfo = res.result.itemParams.info.set;
       this.goodParamRule = res.result.itemParams.rule.tables[0];
       this.goodRateList = res.result.rate.list;
+    },
+    async fetchDetailPageRecommendData() {
+      const res = await service_detail.getDetailPageRecommendData();
+      this.goodRecommendList = res.data.list;
     }
   }
 });

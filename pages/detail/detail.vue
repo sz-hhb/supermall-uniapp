@@ -2,8 +2,7 @@
 	<view class="detail-wrapper">
 		<detail-tab-bar @detail-tab-bar-click="detailTabBarClick"></detail-tab-bar>
 
-
-		<scroll-view class="detail-scroll" scroll-y="true" :scroll-top="0">
+		<view class="detail-scroll">
 			<template v-if="currentDetailPageIndex === 0">
 				<detail-swiper :banner-list="topImages"></detail-swiper>
 				<detail-base-info :base-info="{goodInfo,columnsList}"></detail-base-info>
@@ -19,7 +18,10 @@
 				<detail-good-comment :good-rate-list="goodRateList"></detail-good-comment>
 			</template>
 
-		</scroll-view>
+			<template v-if="currentDetailPageIndex === 3">
+				<detail-recommend-list :recommend-list="goodRecommendList"></detail-recommend-list>
+			</template>
+		</view>
 	</view>
 </template>
 
@@ -31,15 +33,25 @@
 	import DetailGoodInfo from "./cpns/detail-good-info.vue"
 	import DetailGoodParam from "./cpns/detail-good-param.vue"
 	import DetailGoodComment from "./cpns/detail-good-comment.vue"
-	import { onLoad } from "@dcloudio/uni-app"
+	import DetailRecommendList from "./cpns/detail-recommend-list.vue"
+	import { onLoad, onReachBottom } from "@dcloudio/uni-app"
 	import { useDetailStore } from "@/store/detail.js"
 	import { storeToRefs } from "pinia"
 	import { ref } from "vue"
 
 	const detailStore = useDetailStore()
 
-	const { topImages, goodInfo, columnsList, shopInfo, goodDetailInfo, goodParamInfo, goodParamRule, goodRateList } =
-	storeToRefs(detailStore)
+	const {
+		topImages,
+		goodInfo,
+		columnsList,
+		shopInfo,
+		goodDetailInfo,
+		goodParamInfo,
+		goodParamRule,
+		goodRateList,
+		goodRecommendList
+	} = storeToRefs(detailStore)
 
 	const props = defineProps({
 		id: {
@@ -50,6 +62,11 @@
 
 	onLoad(() => {
 		detailStore.fetchDetailPageData(props.id)
+		detailStore.fetchDetailPageRecommendData()
+	})
+
+	onReachBottom(() => {
+		console.log("页面到达底部")
 	})
 
 	const currentDetailPageIndex = ref(0)
@@ -57,12 +74,13 @@
 	const detailTabBarClick = (index) => {
 		currentDetailPageIndex.value = index
 	}
+
+	const detailScrollViewRef = ref(null)
 </script>
 
 <style lang="scss">
 	.detail-wrapper {
 		height: 100%;
-		overflow: auto;
 
 		.detail-scroll {
 			height: calc(100% - 100rpx);

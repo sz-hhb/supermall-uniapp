@@ -1,6 +1,5 @@
 .detail-wrapper {
   height: 100%;
-  overflow: auto;
 }
 .detail-wrapper .detail-scroll {
   height: calc(100% - 100rpx);

@@ -4,7 +4,7 @@ const store_detail = require("../../store/detail.js");
 require("../../service/detail.js");
 require("../../service/index.js");
 if (!Math) {
-  (DetailTabBar + DetailSwiper + DetailBaseInfo + DetailShopInfo + DetailGoodInfo + DetailGoodParam + DetailGoodComment)();
+  (DetailTabBar + DetailSwiper + DetailBaseInfo + DetailShopInfo + DetailGoodInfo + DetailGoodParam + DetailGoodComment + DetailRecommendList)();
 }
 const DetailTabBar = () => "./cpns/detail-tab-bar.js";
 const DetailSwiper = () => "./cpns/detail-swiper.js";
@@ -13,6 +13,7 @@ const DetailShopInfo = () => "./cpns/detail-shop-info.js";
 const DetailGoodInfo = () => "./cpns/detail-good-info.js";
 const DetailGoodParam = () => "./cpns/detail-good-param.js";
 const DetailGoodComment = () => "./cpns/detail-good-comment.js";
+const DetailRecommendList = () => "./cpns/detail-recommend-list.js";
 const _sfc_main = {
   __name: "detail",
   props: {
@@ -24,14 +25,29 @@ const _sfc_main = {
   setup(__props) {
     const props = __props;
     const detailStore = store_detail.useDetailStore();
-    const { topImages, goodInfo, columnsList, shopInfo, goodDetailInfo, goodParamInfo, goodParamRule, goodRateList } = common_vendor.storeToRefs(detailStore);
+    const {
+      topImages,
+      goodInfo,
+      columnsList,
+      shopInfo,
+      goodDetailInfo,
+      goodParamInfo,
+      goodParamRule,
+      goodRateList,
+      goodRecommendList
+    } = common_vendor.storeToRefs(detailStore);
     common_vendor.onLoad(() => {
       detailStore.fetchDetailPageData(props.id);
+      detailStore.fetchDetailPageRecommendData();
+    });
+    common_vendor.onReachBottom(() => {
+      console.log("页面到达底部");
     });
     const currentDetailPageIndex = common_vendor.ref(0);
     const detailTabBarClick = (index) => {
       currentDetailPageIndex.value = index;
     };
+    common_vendor.ref(null);
     return (_ctx, _cache) => {
       return common_vendor.e({
         a: common_vendor.o(detailTabBarClick),
@@ -66,6 +82,12 @@ const _sfc_main = {
       }, currentDetailPageIndex.value === 2 ? {
         j: common_vendor.p({
           ["good-rate-list"]: common_vendor.unref(goodRateList)
+        })
+      } : {}, {
+        k: currentDetailPageIndex.value === 3
+      }, currentDetailPageIndex.value === 3 ? {
+        l: common_vendor.p({
+          ["recommend-list"]: common_vendor.unref(goodRecommendList)
         })
       } : {});
     };

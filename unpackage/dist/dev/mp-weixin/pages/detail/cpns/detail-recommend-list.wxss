@@ -1,0 +1,35 @@
+.recommend-list-wrapper {
+  height: 100%;
+  padding: 10rpx 0;
+}
+.recommend-title {
+  padding: 10rpx 20rpx;
+}
+.recommend-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 10rpx;
+}
+.recommend-list .recommend-item {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+}
+.recommend-list .recommend-item .image {
+  width: 100%;
+}
+.recommend-list .recommend-item .desc {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.recommend-list .recommend-item .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10rpx;
+}
+.recommend-list .recommend-item .info .price {
+  color: #ff57a3;
+}
