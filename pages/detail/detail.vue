@@ -15,6 +15,10 @@
 				<detail-good-param :good-params="{goodParamRule,goodParamInfo}"></detail-good-param>
 			</template>
 
+			<template v-if="currentDetailPageIndex === 2">
+				<detail-good-comment :good-rate-list="goodRateList"></detail-good-comment>
+			</template>
+
 		</scroll-view>
 	</view>
 </template>
@@ -26,6 +30,7 @@
 	import DetailShopInfo from "./cpns/detail-shop-info.vue"
 	import DetailGoodInfo from "./cpns/detail-good-info.vue"
 	import DetailGoodParam from "./cpns/detail-good-param.vue"
+	import DetailGoodComment from "./cpns/detail-good-comment.vue"
 	import { onLoad } from "@dcloudio/uni-app"
 	import { useDetailStore } from "@/store/detail.js"
 	import { storeToRefs } from "pinia"
@@ -33,8 +38,8 @@
 
 	const detailStore = useDetailStore()
 
-	const { topImages, goodInfo, columnsList, shopInfo, goodDetailInfo, goodParamInfo, goodParamRule } = storeToRefs(
-		detailStore)
+	const { topImages, goodInfo, columnsList, shopInfo, goodDetailInfo, goodParamInfo, goodParamRule, goodRateList } =
+	storeToRefs(detailStore)
 
 	const props = defineProps({
 		id: {

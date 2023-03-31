@@ -10,7 +10,8 @@ const useDetailStore = common_vendor.defineStore("detail", {
       shopInfo: {},
       goodDetailInfo: {},
       goodParamInfo: [],
-      goodParamRule: []
+      goodParamRule: [],
+      goodRateList: []
     };
   },
   actions: {
@@ -23,6 +24,7 @@ const useDetailStore = common_vendor.defineStore("detail", {
       this.goodDetailInfo = res.result.detailInfo;
       this.goodParamInfo = res.result.itemParams.info.set;
       this.goodParamRule = res.result.itemParams.rule.tables[0];
+      this.goodRateList = res.result.rate.list;
     }
   }
 });

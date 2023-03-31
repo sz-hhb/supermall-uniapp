@@ -1,0 +1,49 @@
+.good-rate-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 30rpx 20rpx;
+}
+.good-rate-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx solid #e7e7e7;
+}
+.good-rate-header .more {
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+  color: #393333;
+}
+.good-rate-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+  padding: 20rpx 0;
+}
+.good-rate-main .user-comment-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+.good-rate-main .user-comment-item .info {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+}
+.good-rate-main .user-comment-item .info .image {
+  width: 80rpx;
+  border-radius: 50%;
+}
+.good-rate-main .user-comment-item .comment {
+  font-size: 28rpx;
+  color: #777777;
+}
+.good-rate-main .user-comment-item .time {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  font-size: 26rpx;
+  color: #999999;
+}

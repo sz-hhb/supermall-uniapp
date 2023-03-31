@@ -6,6 +6,7 @@
     "detail-base-info": "./cpns/detail-base-info",
     "detail-shop-info": "./cpns/detail-shop-info",
     "detail-good-info": "./cpns/detail-good-info",
-    "detail-good-param": "./cpns/detail-good-param"
+    "detail-good-param": "./cpns/detail-good-param",
+    "detail-good-comment": "./cpns/detail-good-comment"
   }
 }
