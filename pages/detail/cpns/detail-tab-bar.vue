@@ -32,9 +32,9 @@
 	.detail-tab-bar {
 		display: flex;
 		align-items: center;
-		position: sticky;
-		top: 88rpx;
+		position: fixed;
 		z-index: 999;
+		width: 100%;
 		height: 80rpx;
 		background-color: rgba(255, 255, 255, 0.8);
 

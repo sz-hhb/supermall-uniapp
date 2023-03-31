@@ -22,6 +22,8 @@
 				<detail-recommend-list :recommend-list="goodRecommendList"></detail-recommend-list>
 			</template>
 		</view>
+
+		<detail-good-nav></detail-good-nav>
 	</view>
 </template>
 
@@ -34,6 +36,7 @@
 	import DetailGoodParam from "./cpns/detail-good-param.vue"
 	import DetailGoodComment from "./cpns/detail-good-comment.vue"
 	import DetailRecommendList from "./cpns/detail-recommend-list.vue"
+	import DetailGoodNav from "./cpns/detail-good-nav.vue"
 	import { onLoad, onReachBottom } from "@dcloudio/uni-app"
 	import { useDetailStore } from "@/store/detail.js"
 	import { storeToRefs } from "pinia"
@@ -74,16 +77,15 @@
 	const detailTabBarClick = (index) => {
 		currentDetailPageIndex.value = index
 	}
-
-	const detailScrollViewRef = ref(null)
 </script>
 
 <style lang="scss">
 	.detail-wrapper {
+		position: relative;
 		height: 100%;
 
 		.detail-scroll {
-			height: calc(100% - 100rpx);
+			padding-top: 80rpx;
 		}
 	}
 </style>
