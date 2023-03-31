@@ -6,6 +6,7 @@
 			<detail-swiper :banner-list="topImages"></detail-swiper>
 			<detail-base-info :base-info="{goodInfo,columnsList}"></detail-base-info>
 			<detail-shop-info :shop-info="shopInfo"></detail-shop-info>
+			<detail-good-info :good-detail-info="goodDetailInfo"></detail-good-info>
 		</scroll-view>
 	</view>
 </template>
@@ -15,6 +16,7 @@
 	import DetailSwiper from "./cpns/detail-swiper.vue"
 	import DetailBaseInfo from "./cpns/detail-base-info.vue"
 	import DetailShopInfo from "./cpns/detail-shop-info.vue"
+	import DetailGoodInfo from "./cpns/detail-good-info.vue"
 	import { onLoad } from "@dcloudio/uni-app"
 	import { useDetailStore } from "@/store/detail.js"
 	import { storeToRefs } from "pinia"
@@ -22,7 +24,7 @@
 
 	const detailStore = useDetailStore()
 
-	const { topImages, goodInfo, columnsList, shopInfo } = storeToRefs(detailStore)
+	const { topImages, goodInfo, columnsList, shopInfo, goodDetailInfo } = storeToRefs(detailStore)
 
 	const props = defineProps({
 		id: {

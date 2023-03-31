@@ -1,0 +1,18 @@
+.detail-tab-bar {
+  display: flex;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  height: 80rpx;
+}
+.detail-tab-bar .tab-bar-item {
+  flex: 1;
+  text-align: center;
+}
+.detail-tab-bar .tab-bar-item .title {
+  font-size: 30rpx;
+}
+.detail-tab-bar .tab-bar-item .title.active {
+  font-weight: 700;
+  color: #ff8198;
+}

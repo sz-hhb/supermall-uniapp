@@ -11,7 +11,8 @@
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "购物街",
     "navigationBarBackgroundColor": "#ff8198",
-    "backgroundColor": "#F8F8F8"
+    "backgroundColor": "#F8F8F8",
+    "onReachBottomDistance": 50
   },
   "tabBar": {
     "selectedColor": "#ff8198",

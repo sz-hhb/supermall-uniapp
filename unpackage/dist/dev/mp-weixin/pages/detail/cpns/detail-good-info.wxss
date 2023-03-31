@@ -1,0 +1,62 @@
+.good-info-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.good-info-wrapper .clear-fix {
+  zoom: 1;
+}
+.good-info-wrapper .clear-fix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.good-info-wrapper .good-desc {
+  padding: 30rpx;
+}
+.good-info-wrapper .good-desc .start {
+  position: relative;
+  width: 180rpx;
+  height: 2rpx;
+  background-color: #a3a3a5;
+}
+.good-info-wrapper .good-desc .start::before {
+  content: "";
+  position: absolute;
+  top: -10rpx;
+  display: inline-block;
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #333333;
+}
+.good-info-wrapper .good-desc .desc {
+  padding: 30rpx 0;
+  font-size: 28rpx;
+}
+.good-info-wrapper .good-desc .end {
+  float: right;
+  position: relative;
+  width: 180rpx;
+  height: 2rpx;
+  background-color: #a3a3a5;
+}
+.good-info-wrapper .good-desc .end::after {
+  content: "";
+  position: absolute;
+  top: -10rpx;
+  right: 0;
+  display: inline-block;
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #333333;
+}
+.good-info-wrapper .wearer-effect {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+.good-info-wrapper .wearer-effect .title {
+  padding: 0 30rpx;
+}
+.good-info-wrapper .wearer-effect .image {
+  width: 100%;
+}

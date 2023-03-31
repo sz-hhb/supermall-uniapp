@@ -2,5 +2,16 @@
 	/*每个页面公共css */
 page {
 		height: 100%;
+
+		/* &::-webkit-scrollbar {
+			display: none;
+		} */
+}
+scroll-view ::-webkit-scrollbar {
+		display: none !important;
+		width: 0 !important;
+		height: 0 !important;
+		-webkit-appearance: none;
+		background: transparent;
 }
 page{--status-bar-height:25px;--top-window-height:0px;--window-top:0px;--window-bottom:0px;--window-left:0px;--window-right:0px;--window-magin:0px}[data-c-h="true"]{display: none !important;}

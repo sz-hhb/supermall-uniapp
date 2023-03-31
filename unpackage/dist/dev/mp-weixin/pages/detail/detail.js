@@ -4,12 +4,13 @@ const store_detail = require("../../store/detail.js");
 require("../../service/detail.js");
 require("../../service/index.js");
 if (!Math) {
-  (DetailTabBar + DetailSwiper + DetailBaseInfo + DetailShopInfo)();
+  (DetailTabBar + DetailSwiper + DetailBaseInfo + DetailShopInfo + DetailGoodInfo)();
 }
 const DetailTabBar = () => "./cpns/detail-tab-bar.js";
 const DetailSwiper = () => "./cpns/detail-swiper.js";
 const DetailBaseInfo = () => "./cpns/detail-base-info.js";
 const DetailShopInfo = () => "./cpns/detail-shop-info.js";
+const DetailGoodInfo = () => "./cpns/detail-good-info.js";
 const _sfc_main = {
   __name: "detail",
   props: {
@@ -21,7 +22,7 @@ const _sfc_main = {
   setup(__props) {
     const props = __props;
     const detailStore = store_detail.useDetailStore();
-    const { topImages, goodInfo, columnsList, shopInfo } = common_vendor.storeToRefs(detailStore);
+    const { topImages, goodInfo, columnsList, shopInfo, goodDetailInfo } = common_vendor.storeToRefs(detailStore);
     common_vendor.onLoad(() => {
       detailStore.fetchDetailPageData(props.id);
     });
@@ -41,6 +42,9 @@ const _sfc_main = {
         }),
         d: common_vendor.p({
           ["shop-info"]: common_vendor.unref(shopInfo)
+        }),
+        e: common_vendor.p({
+          ["good-detail-info"]: common_vendor.unref(goodDetailInfo)
         })
       };
     };

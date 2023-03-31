@@ -1,0 +1,78 @@
+.base-info {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 10rpx solid #f2f2f2;
+}
+.base-info .good-desc {
+  padding: 10rpx;
+}
+.base-info .good-price {
+  display: flex;
+  align-items: flex-end;
+  gap: 10rpx;
+  padding: 20rpx 10rpx;
+}
+.base-info .good-price .now-price {
+  font-size: 45rpx;
+  color: #ff8198;
+}
+.base-info .good-price .old-price {
+  display: flex;
+  margin-bottom: 4rpx;
+}
+.base-info .good-price .old-price .desc {
+  color: #9d9d9d;
+  text-decoration: line-through;
+}
+.base-info .good-price .old-price .discount {
+  position: relative;
+  top: -30rpx;
+  padding: 6rpx 10rpx;
+  border-radius: 15rpx;
+  font-size: 24rpx;
+  color: #ffffff;
+  background-color: #ff8198;
+}
+.base-info .good-columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rpx;
+  border-bottom: 2rpx solid #efefef;
+}
+.base-info .good-columns .column-item {
+  color: #a9a9a9;
+  font-size: 28rpx;
+  padding-bottom: 20rpx;
+}
+.base-info .promise-colums {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40rpx 10rpx;
+  font-size: 28rpx;
+}
+.base-info .promise-colums .colums {
+  display: flex;
+  align-items: center;
+}
+.base-info .promise-colums .right-select {
+  position: relative;
+  width: 26rpx;
+  height: 26rpx;
+  border: 2rpx solid #3f3e40;
+  border-radius: 50%;
+}
+.base-info .promise-colums .right-select::after {
+  position: absolute;
+  left: 10rpx;
+  top: 4rpx;
+  content: "";
+  display: inline-block;
+  width: 6rpx;
+  height: 12rpx;
+  border: 2rpx solid #3f3e40;
+  border-left: 0;
+  border-top: 0;
+  transform: rotate(45deg);
+}
