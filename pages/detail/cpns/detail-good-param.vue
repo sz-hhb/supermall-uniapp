@@ -12,7 +12,7 @@
 		<view class="good-param-set">
 			<uni-table emptyText="暂无更多数据">
 				<uni-tr v-for="(item, index) in goodParams.goodParamInfo" :key="index">
-					<uni-td>{{item.key}}</uni-td>
+					<uni-td class="set-key">{{item.key}}</uni-td>
 					<uni-td class="set-value">{{item.value}}</uni-td>
 				</uni-tr>
 			</uni-table>
@@ -32,6 +32,10 @@
 <style lang="scss">
 	.good-param-wrapper {
 		padding-bottom: 30rpx;
+
+		.set-key {
+			min-width: 100rpx;
+		}
 
 		.set-value {
 			color: #f17f76;

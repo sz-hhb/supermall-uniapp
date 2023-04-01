@@ -22,6 +22,12 @@
 		} */
 	}
 
+	/* html,
+	body {
+		height: unset;
+		overflow: unset;
+	} */
+
 	scroll-view ::-webkit-scrollbar {
 		display: none !important;
 		width: 0 !important;

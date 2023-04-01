@@ -1,6 +1,7 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
 const store_detail = require("../../store/detail.js");
+const store_cart = require("../../store/cart.js");
 require("../../service/detail.js");
 require("../../service/index.js");
 if (!Math) {
@@ -25,7 +26,9 @@ const _sfc_main = {
   },
   setup(__props) {
     const props = __props;
+    const currentDetailPageIndex = common_vendor.ref(0);
     const detailStore = store_detail.useDetailStore();
+    const cartStore = store_cart.useCartStore();
     const {
       topImages,
       goodInfo,
@@ -44,9 +47,17 @@ const _sfc_main = {
     common_vendor.onReachBottom(() => {
       console.log("页面到达底部");
     });
-    const currentDetailPageIndex = common_vendor.ref(0);
     const detailTabBarClick = (index) => {
       currentDetailPageIndex.value = index;
+    };
+    const addToCart = () => {
+      const goodObj = {};
+      goodObj.iid = props.id;
+      goodObj.imgUrl = topImages.value[0];
+      goodObj.title = goodInfo.value.title;
+      goodObj.desc = goodInfo.value.desc;
+      goodObj.price = goodInfo.value.highNowPrice;
+      cartStore.addToCart(goodObj);
     };
     return (_ctx, _cache) => {
       return common_vendor.e({
@@ -89,7 +100,9 @@ const _sfc_main = {
         l: common_vendor.p({
           ["recommend-list"]: common_vendor.unref(goodRecommendList)
         })
-      } : {});
+      } : {}, {
+        m: common_vendor.o(addToCart)
+      });
     };
   }
 };

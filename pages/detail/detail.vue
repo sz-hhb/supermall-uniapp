@@ -23,7 +23,7 @@
 			</template>
 		</view>
 
-		<detail-good-nav></detail-good-nav>
+		<detail-good-nav @add-to-cart="addToCart"></detail-good-nav>
 	</view>
 </template>
 
@@ -39,10 +39,14 @@
 	import DetailGoodNav from "./cpns/detail-good-nav.vue"
 	import { onLoad, onReachBottom } from "@dcloudio/uni-app"
 	import { useDetailStore } from "@/store/detail.js"
+	import { useCartStore } from "@/store/cart.js"
 	import { storeToRefs } from "pinia"
 	import { ref } from "vue"
 
+	const currentDetailPageIndex = ref(0)
+
 	const detailStore = useDetailStore()
+	const cartStore = useCartStore()
 
 	const {
 		topImages,
@@ -72,10 +76,18 @@
 		console.log("页面到达底部")
 	})
 
-	const currentDetailPageIndex = ref(0)
-
 	const detailTabBarClick = (index) => {
 		currentDetailPageIndex.value = index
+	}
+
+	const addToCart = () => {
+		const goodObj = {}
+		goodObj.iid = props.id
+		goodObj.imgUrl = topImages.value[0]
+		goodObj.title = goodInfo.value.title
+		goodObj.desc = goodInfo.value.desc
+		goodObj.price = goodInfo.value.highNowPrice
+		cartStore.addToCart(goodObj)
 	}
 </script>
 
@@ -83,6 +95,7 @@
 	.detail-wrapper {
 		position: relative;
 		height: 100%;
+		overflow: auto;
 
 		.detail-scroll {
 			padding-top: 80rpx;

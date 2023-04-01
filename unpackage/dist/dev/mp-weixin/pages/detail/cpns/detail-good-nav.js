@@ -12,7 +12,8 @@ if (!Math) {
 }
 const _sfc_main = {
   __name: "detail-good-nav",
-  setup(__props) {
+  emits: ["add-to-cart"],
+  setup(__props, { emit: emits }) {
     const options = common_vendor.reactive([{
       icon: "shop",
       text: "店铺"
@@ -29,7 +30,9 @@ const _sfc_main = {
     };
     const buttonClick = (e) => {
       console.log(e);
-      options[1].info++;
+      if (e.index == 0) {
+        emits("add-to-cart");
+      }
     };
     return (_ctx, _cache) => {
       return {

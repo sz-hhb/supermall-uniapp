@@ -6,6 +6,24 @@ $gNormalColor: #666;
 
 $gBgColor:#f2f2f2;
 
+.uni-section {
+	.uni-section-header {
+		display: none !important;
+	}
+	
+	.uni-section-content {
+		height: 120rpx !important;
+	}
+	
+	.uni-goods-nav {
+		height: 100% !important;
+	}
+	
+	.uni-tab__cart-box {
+		height: 100% !important;
+	}
+}
+
 @mixin normalFlex($direction: row, $justify: space-between) {
 	display: flex;
 	justify-content: $justify;

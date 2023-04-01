@@ -25,9 +25,13 @@
 		})
 	}
 
+	const emits = defineEmits(["add-to-cart"])
+
 	const buttonClick = (e) => {
 		console.log(e)
-		options[1].info++;
+		if (e.index == 0) {
+			emits("add-to-cart")
+		}
 	}
 </script>
 
@@ -36,21 +40,5 @@
 		position: fixed;
 		bottom: 0;
 		width: 100%;
-
-		:deep(.uni-section .uni-section-header) {
-			display: none !important;
-		}
-
-		:deep(.uni-section-content) {
-			height: 120rpx;
-		}
-
-		:deep(.uni-goods-nav) {
-			height: 100%;
-		}
-
-		:deep(.uni-tab__cart-box) {
-			height: 100%;
-		}
 	}
 </style>
