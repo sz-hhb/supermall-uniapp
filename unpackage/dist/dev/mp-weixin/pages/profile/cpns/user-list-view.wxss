@@ -1,0 +1,13 @@
+.list-view-wrapper .list-item {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  height: 88rpx;
+  border-bottom: 2rpx solid #f9f9f9;
+  font-size: 32rpx;
+}
+.list-view-wrapper .list-item .image {
+  width: 40rpx;
+  height: 40rpx;
+  padding: 20rpx 30rpx;
+}

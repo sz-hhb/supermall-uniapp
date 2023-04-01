@@ -2,10 +2,11 @@
 const common_vendor = require("../../common/vendor.js");
 const common_assets = require("../../common/assets.js");
 if (!Math) {
-  (UserInfo + AssetsDetail)();
+  (UserInfo + AssetsDetail + UserListView)();
 }
 const UserInfo = () => "./cpns/user-info.js";
 const AssetsDetail = () => "./cpns/assets-detail.js";
+const UserListView = () => "./cpns/user-list-view.js";
 const _sfc_main = {
   __name: "profile",
   setup(__props) {
@@ -43,8 +44,12 @@ const _sfc_main = {
         a: common_vendor.p({
           ["assets-info"]: assetsInfo
         }),
-        b: orderList,
-        c: serviceList
+        b: common_vendor.p({
+          listItem: orderList
+        }),
+        c: common_vendor.p({
+          listItem: serviceList
+        })
       };
     };
   }

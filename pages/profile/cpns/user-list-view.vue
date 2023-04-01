@@ -1,5 +1,5 @@
 <template>
-	<view class="list-view">
+	<view class="list-view-wrapper">
 		<template v-for="(item, index) in listItem" :key="index">
 			<view class="list-item">
 				<image class="image" :src="item.icon" :class="{color: item.iconColor}"></image>
@@ -19,7 +19,7 @@
 </script>
 
 <style lang="scss">
-	.list-view {
+	.list-view-wrapper {
 		.list-item {
 			display: flex;
 			align-items: center;

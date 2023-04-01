@@ -4,11 +4,11 @@
 		<assets-detail :assets-info="assetsInfo"></assets-detail>
 
 		<view class="order-list-wrapper">
-			<list-view :listItem="orderList"></list-view>
+			<user-list-view :listItem="orderList"></user-list-view>
 		</view>
 
 		<view class="service-list-wrapper">
-			<list-view :listItem="serviceList"></list-view>
+			<user-list-view :listItem="serviceList"></user-list-view>
 		</view>
 	</view>
 </template>
@@ -16,7 +16,7 @@
 <script setup>
 	import UserInfo from "./cpns/user-info.vue"
 	import AssetsDetail from "./cpns/assets-detail.vue"
-	import ListView from "./cpns/list-view.vue"
+	import UserListView from "./cpns/user-list-view.vue"
 	import messagePNG from "@/static/images/profile/message.png"
 	import appPNG from "@/static/images/profile/app.png"
 	import vipPNG from "@/static/images/profile/vip.png"

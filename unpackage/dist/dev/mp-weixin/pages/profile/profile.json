@@ -2,6 +2,7 @@
   "enablePullDownRefresh": false,
   "usingComponents": {
     "user-info": "./cpns/user-info",
-    "assets-detail": "./cpns/assets-detail"
+    "assets-detail": "./cpns/assets-detail",
+    "user-list-view": "./cpns/user-list-view"
   }
 }
