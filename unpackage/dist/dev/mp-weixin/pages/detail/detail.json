@@ -8,6 +8,7 @@
     "detail-good-info": "./cpns/detail-good-info",
     "detail-good-param": "./cpns/detail-good-param",
     "detail-good-comment": "./cpns/detail-good-comment",
-    "detail-recommend-list": "./cpns/detail-recommend-list"
+    "detail-recommend-list": "./cpns/detail-recommend-list",
+    "detail-good-nav": "./cpns/detail-good-nav"
   }
 }

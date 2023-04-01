@@ -1,10 +1,16 @@
 "use strict";
 const common_vendor = require("../../../common/vendor.js");
 if (!Array) {
-  const _component_uni_td = common_vendor.resolveComponent("uni-td");
-  const _component_uni_tr = common_vendor.resolveComponent("uni-tr");
-  const _component_uni_table = common_vendor.resolveComponent("uni-table");
-  (_component_uni_td + _component_uni_tr + _component_uni_table)();
+  const _easycom_uni_td2 = common_vendor.resolveComponent("uni-td");
+  const _easycom_uni_tr2 = common_vendor.resolveComponent("uni-tr");
+  const _easycom_uni_table2 = common_vendor.resolveComponent("uni-table");
+  (_easycom_uni_td2 + _easycom_uni_tr2 + _easycom_uni_table2)();
+}
+const _easycom_uni_td = () => "../../../uni_modules/uni-table/components/uni-td/uni-td.js";
+const _easycom_uni_tr = () => "../../../uni_modules/uni-table/components/uni-tr/uni-tr.js";
+const _easycom_uni_table = () => "../../../uni_modules/uni-table/components/uni-table/uni-table.js";
+if (!Math) {
+  (_easycom_uni_td + _easycom_uni_tr + _easycom_uni_table)();
 }
 const _sfc_main = {
   __name: "detail-good-param",

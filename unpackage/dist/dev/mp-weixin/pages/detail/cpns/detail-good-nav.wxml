@@ -1,0 +1,1 @@
+<view class="uni-container"><uni-section wx:if="{{d}}" u-s="{{['d']}}" u-i="4254d3b5-0" bind:__l="__l" u-p="{{d}}"><uni-goods-nav wx:if="{{c}}" bindclick="{{a}}" bindbuttonClick="{{b}}" u-i="4254d3b5-1,4254d3b5-0" bind:__l="__l" u-p="{{c}}"/></uni-section></view>

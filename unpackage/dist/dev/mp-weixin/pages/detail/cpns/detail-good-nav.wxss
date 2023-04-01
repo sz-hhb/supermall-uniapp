@@ -1,0 +1,17 @@
+.uni-container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.uni-container .uni-section .uni-section-header {
+  display: none !important;
+}
+.uni-container .uni-section-content {
+  height: 120rpx;
+}
+.uni-container .uni-goods-nav {
+  height: 100%;
+}
+.uni-container .uni-tab__cart-box {
+  height: 100%;
+}

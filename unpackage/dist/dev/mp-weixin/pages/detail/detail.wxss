@@ -1,6 +1,8 @@
 .detail-wrapper {
+  position: relative;
   height: 100%;
 }
 .detail-wrapper .detail-scroll {
-  height: calc(100% - 100rpx);
+  padding-top: 80rpx;
+  padding-bottom: 120rpx;
 }

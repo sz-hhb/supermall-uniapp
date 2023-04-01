@@ -1,0 +1,1 @@
+<view class="assets-detail"><view class="assets-list"><block wx:for="{{a}}" wx:for-item="item" wx:key="d"><view class="assets-item"><view><text class="assets-balance">{{item.a}}</text><text>{{item.b}}</text></view><view class="">{{item.c}}</view></view></block></view></view>

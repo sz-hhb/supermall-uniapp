@@ -1,4 +1,7 @@
 {
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "user-info": "./cpns/user-info",
+    "assets-detail": "./cpns/assets-detail"
+  }
 }

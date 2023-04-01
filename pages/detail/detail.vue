@@ -86,6 +86,7 @@
 
 		.detail-scroll {
 			padding-top: 80rpx;
+			padding-bottom: 120rpx;
 		}
 	}
 </style>

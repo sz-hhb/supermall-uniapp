@@ -1,1 +1,1 @@
-<view></view>
+<view class="profile-wrapper"><user-info u-i="deaab5f0-0" bind:__l="__l"></user-info><assets-detail wx:if="{{a}}" u-i="deaab5f0-1" bind:__l="__l" u-p="{{a}}"></assets-detail><view class="order-list-wrapper"><list-view listItem="{{b}}"></list-view></view><view class="service-list-wrapper"><list-view listItem="{{c}}"></list-view></view></view>

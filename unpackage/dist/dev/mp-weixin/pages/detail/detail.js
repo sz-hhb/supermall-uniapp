@@ -4,7 +4,7 @@ const store_detail = require("../../store/detail.js");
 require("../../service/detail.js");
 require("../../service/index.js");
 if (!Math) {
-  (DetailTabBar + DetailSwiper + DetailBaseInfo + DetailShopInfo + DetailGoodInfo + DetailGoodParam + DetailGoodComment + DetailRecommendList)();
+  (DetailTabBar + DetailSwiper + DetailBaseInfo + DetailShopInfo + DetailGoodInfo + DetailGoodParam + DetailGoodComment + DetailRecommendList + DetailGoodNav)();
 }
 const DetailTabBar = () => "./cpns/detail-tab-bar.js";
 const DetailSwiper = () => "./cpns/detail-swiper.js";
@@ -14,6 +14,7 @@ const DetailGoodInfo = () => "./cpns/detail-good-info.js";
 const DetailGoodParam = () => "./cpns/detail-good-param.js";
 const DetailGoodComment = () => "./cpns/detail-good-comment.js";
 const DetailRecommendList = () => "./cpns/detail-recommend-list.js";
+const DetailGoodNav = () => "./cpns/detail-good-nav.js";
 const _sfc_main = {
   __name: "detail",
   props: {
@@ -47,7 +48,6 @@ const _sfc_main = {
     const detailTabBarClick = (index) => {
       currentDetailPageIndex.value = index;
     };
-    common_vendor.ref(null);
     return (_ctx, _cache) => {
       return common_vendor.e({
         a: common_vendor.o(detailTabBarClick),

@@ -1,0 +1,37 @@
+.user-info-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  background-color: #ff8198;
+  padding: 40rpx;
+}
+.user-info-left .image {
+  width: 120rpx;
+}
+.user-info-right {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-info-right .user-action {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+  color: #ffe5ea;
+}
+.user-info-right .user-action .top {
+  font-size: 38rpx;
+}
+.user-info-right .user-action .bottom {
+  display: flex;
+  align-items: center;
+  gap: 10rpx;
+  font-size: 28rpx;
+}
+.user-info-right .user-action .image {
+  width: 36rpx;
+}
+.user-info-right .image {
+  width: 32rpx;
+}
