@@ -1,0 +1,1 @@
+<view class="cart-bottom-nav"><view class="nav-left"><label class="radio"><radio checked="{{a}}" color="#ff8198" bindtap="{{b}}"/><text>全选</text><text>合计：￥{{c}}</text></label></view><view class="nav-right"><text>{{d}}</text></view></view>

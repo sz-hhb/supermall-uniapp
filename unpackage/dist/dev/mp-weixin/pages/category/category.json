@@ -1,4 +1,9 @@
 {
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "tab-control": "../../components/tab-control/tab-control",
+    "grid-view-item": "../../components/grid-view-item/grid-view-item",
+    "category-classification": "./cpns/category-classification",
+    "category-item": "./cpns/category-item"
+  }
 }

@@ -1,4 +1,7 @@
 {
   "enablePullDownRefresh": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "cart-list-item": "./cpns/cart-list-item",
+    "cart-bottom-nav": "./cpns/cart-bottom-nav"
+  }
 }

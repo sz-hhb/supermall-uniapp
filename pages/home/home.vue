@@ -3,8 +3,7 @@
 		<home-banner :banners="banners" @banner-click="bannerClick"></home-banner>
 		<home-recommend :recommends="recommends" @recommend-item-click="recommendItemClick"></home-recommend>
 		<home-popular></home-popular>
-		<tab-control ref="tabControlRef" :class="{fixed: isActive}" :titles="['流行', '新款', '精选']"
-			@tab-item-click="tabItemClick"></tab-control>
+		<tab-control :class="{fixed: isActive}" :titles="['流行', '新款', '精选']" @tab-item-click="tabItemClick"></tab-control>
 		<!-- <uni-grid :column="2" :square="false" :show-border="false" :highlight="false">
 			<template v-for="(item, index) in goodsList[types[currentType]].list" :key="item.iid">
 				<uni-grid-item>
@@ -48,7 +47,6 @@
 			goodsList.value[[types[currentType.value]]].page + 1)
 	})
 
-	const tabControlRef = ref(null)
 	const isActive = ref(false)
 
 	// onPageScroll((e) => {

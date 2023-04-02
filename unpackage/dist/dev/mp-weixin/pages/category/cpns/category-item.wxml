@@ -1,0 +1,1 @@
+<view class="category-item" bindtap="{{c}}"><image class="image" src="{{a}}"></image><view>{{b}}</view></view>

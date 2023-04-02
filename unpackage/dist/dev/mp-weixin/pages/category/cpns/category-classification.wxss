@@ -1,0 +1,34 @@
+.uni-section .uni-section-header {
+  display: none !important;
+}
+.uni-section .uni-section-content {
+  height: 120rpx !important;
+}
+.uni-section .uni-goods-nav {
+  height: 100% !important;
+}
+.uni-section .uni-tab__cart-box {
+  height: 100% !important;
+}
+.category-menu {
+  height: 100%;
+  overflow: hidden;
+}
+.category-menu .menu-scroll-view {
+  height: 100%;
+}
+.category-menu .menu-item {
+  display: flex;
+  width: 200rpx;
+  height: 90rpx;
+  background-color: #f6f6f6;
+}
+.category-menu .menu-item.active {
+  color: #ff5777;
+  font-weight: 700;
+  background-color: #fff;
+  border-left: 4rpx solid #ff5777;
+}
+.category-menu .menu-item .title {
+  margin: auto;
+}

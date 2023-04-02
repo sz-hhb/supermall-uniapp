@@ -12,17 +12,26 @@ const _sfc_main = {
   },
   emits: ["goods-item-click"],
   setup(__props, { emit: emits }) {
+    const props = __props;
+    const newGoodsInfo = common_vendor.computed(() => {
+      if (props.goodsInfo.show) {
+        props.goodsInfo.img = props.goodsInfo.show.img;
+        return props.goodsInfo;
+      } else {
+        return props.goodsInfo;
+      }
+    });
     const goodsItemClick = (id) => {
       emits("goods-item-click", id);
     };
     return (_ctx, _cache) => {
       return {
-        a: __props.goodsInfo.show.img,
-        b: common_vendor.t(__props.goodsInfo.title),
-        c: common_vendor.t(__props.goodsInfo.price),
+        a: common_vendor.unref(newGoodsInfo).img,
+        b: common_vendor.t(common_vendor.unref(newGoodsInfo).title),
+        c: common_vendor.t(common_vendor.unref(newGoodsInfo).price),
         d: common_assets._imports_0,
-        e: common_vendor.t(__props.goodsInfo.cfav),
-        f: common_vendor.o(($event) => goodsItemClick(__props.goodsInfo.iid))
+        e: common_vendor.t(common_vendor.unref(newGoodsInfo).cfav),
+        f: common_vendor.o(($event) => goodsItemClick(common_vendor.unref(newGoodsInfo).iid))
       };
     };
   }

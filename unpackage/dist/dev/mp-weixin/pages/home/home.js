@@ -34,7 +34,6 @@ const _sfc_main = {
         goodsList.value[[store_home.types[currentType.value]]].page + 1
       );
     });
-    const tabControlRef = common_vendor.ref(null);
     const isActive = common_vendor.ref(false);
     const bannerClick = (link) => {
       common_vendor.index.navigateTo({
@@ -64,15 +63,12 @@ const _sfc_main = {
         d: common_vendor.p({
           recommends: common_vendor.unref(recommends)
         }),
-        e: common_vendor.sr(tabControlRef, "c48adcd8-3", {
-          "k": "tabControlRef"
-        }),
-        f: isActive.value ? 1 : "",
-        g: common_vendor.o(tabItemClick),
-        h: common_vendor.p({
+        e: isActive.value ? 1 : "",
+        f: common_vendor.o(tabItemClick),
+        g: common_vendor.p({
           titles: ["流行", "新款", "精选"]
         }),
-        i: common_vendor.f(common_vendor.unref(goodsList)[common_vendor.unref(store_home.types)[currentType.value]].list, (item, index, i0) => {
+        h: common_vendor.f(common_vendor.unref(goodsList)[common_vendor.unref(store_home.types)[currentType.value]].list, (item, index, i0) => {
           return {
             a: common_vendor.o(goodItemClick, item.iid),
             b: "c48adcd8-4-" + i0,

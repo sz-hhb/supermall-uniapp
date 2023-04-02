@@ -1,1 +1,1 @@
-<view></view>
+<view class="cart-page-wrapper"><view class="cart-list-wrapper"><block wx:for="{{a}}" wx:for-item="item" wx:key="d"><cart-list-item wx:if="{{item.c}}" bindradioChange="{{item.a}}" u-i="{{item.b}}" bind:__l="__l" u-p="{{item.c}}"></cart-list-item></block></view><view class="cart-total-price"><cart-bottom-nav wx:if="{{c}}" bindchangeRadioStatus="{{b}}" u-i="40cffb98-1" bind:__l="__l" u-p="{{c}}"></cart-bottom-nav></view></view>

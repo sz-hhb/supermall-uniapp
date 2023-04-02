@@ -1,27 +1,38 @@
 <template>
-	<view class="goods-item" @click="goodsItemClick(goodsInfo.iid)">
+	<view class="goods-item" @click="goodsItemClick(newGoodsInfo.iid)">
 		<!-- #ifndef H5 -->
-		<image class="image" :lazy-load="true" :src="goodsInfo.show.img" mode="widthFix"></image>
+		<image class="image" :lazy-load="true" :src="newGoodsInfo.img" mode="widthFix"></image>
 		<!-- #endif -->
 		<!-- #ifdef H5 -->
-		<img class="image" v-lazy="goodsInfo.show.img">
+		<img class="image" v-lazy="newGoodsInfo.img">
 		<!-- #endif -->
 		<view class="desc-info">
-			<view class="title">{{goodsInfo.title}}</view>
+			<view class="title">{{newGoodsInfo.title}}</view>
 			<view class="info">
-				<text class="price">￥{{goodsInfo.price}}</text>
+				<text class="price">￥{{newGoodsInfo.price}}</text>
 				<image class="cfav-img" src="@/static/images/common/favor.png" mode="widthFix"></image>
-				<text class="cfav">{{goodsInfo.cfav}}</text>
+				<text class="cfav">{{newGoodsInfo.cfav}}</text>
 			</view>
 		</view>
 	</view>
 </template>
 
 <script setup>
+	import { computed } from "vue"
+
 	const props = defineProps({
 		goodsInfo: {
 			type: Object,
 			default: () => {}
+		}
+	})
+
+	const newGoodsInfo = computed(() => {
+		if (props.goodsInfo.show) {
+			props.goodsInfo.img = props.goodsInfo.show.img
+			return props.goodsInfo
+		} else {
+			return props.goodsInfo
 		}
 	})
 
