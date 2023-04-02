@@ -1,5 +1,6 @@
 "use strict";
 const common_vendor = require("../../../common/vendor.js");
+const store_cart = require("../../../store/cart.js");
 if (!Array) {
   const _easycom_uni_goods_nav2 = common_vendor.resolveComponent("uni-goods-nav");
   const _easycom_uni_section2 = common_vendor.resolveComponent("uni-section");
@@ -14,13 +15,14 @@ const _sfc_main = {
   __name: "detail-good-nav",
   emits: ["add-to-cart"],
   setup(__props, { emit: emits }) {
+    const cartStore = store_cart.useCartStore();
     const options = common_vendor.reactive([{
       icon: "shop",
       text: "店铺"
     }, {
       icon: "cart",
       text: "购物车",
-      info: 0
+      info: cartStore.getCartListLength
     }]);
     const onClick = (e) => {
       common_vendor.index.showToast({
@@ -29,9 +31,12 @@ const _sfc_main = {
       });
     };
     const buttonClick = (e) => {
-      console.log(e);
       if (e.index == 0) {
+        common_vendor.index.showToast({
+          title: "加入购物车"
+        });
         emits("add-to-cart");
+        options[1].info = cartStore.getCartListLength;
       }
     };
     return (_ctx, _cache) => {

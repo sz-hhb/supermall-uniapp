@@ -8,6 +8,10 @@
 
 <script setup>
 	import { reactive } from "vue"
+	import { useCartStore } from "@/store/cart.js"
+	import { storeToRefs } from "pinia"
+
+	const cartStore = useCartStore()
 
 	const options = reactive([{
 		icon: "shop",
@@ -15,7 +19,7 @@
 	}, {
 		icon: "cart",
 		text: "购物车",
-		info: 0
+		info: cartStore.getCartListLength
 	}])
 
 	const onClick = (e) => {
@@ -28,9 +32,12 @@
 	const emits = defineEmits(["add-to-cart"])
 
 	const buttonClick = (e) => {
-		console.log(e)
 		if (e.index == 0) {
+			uni.showToast({
+				title: "加入购物车"
+			})
 			emits("add-to-cart")
+			options[1].info = cartStore.getCartListLength
 		}
 	}
 </script>

@@ -7837,6 +7837,7 @@ const onLoad = /* @__PURE__ */ createHook(ON_LOAD);
 const onReachBottom = /* @__PURE__ */ createHook(ON_REACH_BOTTOM);
 exports.Pinia = Pinia;
 exports._export_sfc = _export_sfc;
+exports.computed = computed;
 exports.createPinia = createPinia;
 exports.createSSRApp = createSSRApp;
 exports.defineStore = defineStore;
