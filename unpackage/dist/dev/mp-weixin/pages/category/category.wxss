@@ -29,6 +29,9 @@
   gap: 20rpx;
   width: 100%;
 }
+.category-wrapper .category-detail .category-item-list .category-item-wrapper {
+  width: 30%;
+}
 .category-wrapper .category-detail .item-scroll-view {
   height: 100%;
 }

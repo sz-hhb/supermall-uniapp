@@ -15,7 +15,6 @@
   flex-direction: column;
   gap: 20rpx;
   align-items: center;
-  width: 30%;
 }
 .category-item .image {
   width: 130rpx;

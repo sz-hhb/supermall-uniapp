@@ -42,11 +42,12 @@
 <style lang="scss">
 	.cart-page-wrapper {
 		position: relative;
-		padding-bottom: 240rpx;
+		width: 100%;
+		height: 100%;
 
 		.cart-total-price {
-			position: fixed;
-			bottom: 100rpx;
+			position: absolute;
+			bottom: 0;
 			width: 100%;
 		}
 	}

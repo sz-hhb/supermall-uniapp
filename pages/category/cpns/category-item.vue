@@ -26,7 +26,6 @@
 		flex-direction: column;
 		gap: 20rpx;
 		align-items: center;
-		width: 30%;
 
 		.image {
 			width: 130rpx;

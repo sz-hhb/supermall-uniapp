@@ -5,7 +5,9 @@
 			<scroll-view class="item-scroll-view" scroll-y="true">
 				<view class="category-item-list">
 					<template v-for="(item, index) in subCategoryList" :key="index">
-						<category-item :itemInfo="item" @category-item-click="categoryItemClick"></category-item>
+						<view class="category-item-wrapper">
+							<category-item :itemInfo="item" @category-item-click="categoryItemClick"></category-item>
+						</view>
 					</template>
 				</view>
 				<tab-control :titles="['流行', '新款', '精选']" @tab-item-click="tabItemClick"></tab-control>
@@ -82,6 +84,10 @@
 				align-items: center;
 				gap: 20rpx;
 				width: 100%;
+
+				.category-item-wrapper {
+					width: 30%;
+				}
 			}
 
 			.item-scroll-view {
